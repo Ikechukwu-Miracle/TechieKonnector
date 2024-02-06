@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="welcome-message-box">
+            <div class="welcome-message">
+                <h1>
+                    WELCOME TO <span class="tech">TECHIE</span><span class="konnect">KONNECTOR</span>
+                </h1>
+            </div>
+        </div>
+
+        <div class="login">
+            <!-- <input type="text" name="email" id="email" placeholder="Email" autofocus> -->
+            <div class="form-box">
+                <div class="login-message">
+                    <h2>
+                        WELCOME BACK!
+                    </h2>
+                    <P>Please Login to access your account.</P>
+                </div>
+                <form action="">
+                    <!-- <label for="email">Email</label> -->
+                    <input type="email" name="email" id="email" placeholder="Enter Email..." autofocus autocomplete="off">
+                    <!-- <label for="pwd">Password</label> -->
+                    <input type="password" name="password" id="password" placeholder="Enter Password...">
+                    <div class="check-container">
+                        <input type="checkbox" name="remember" id="remember">
+                        <label for="remember" class="remember-check">remember me</label>
+                    </div>
+                    <input type="submit" value="Login">
+                </form>
+                <p>Are you new here? Create an <a href="register.html">account</a></p>
+                <p>Forgot your password? <a href="#">Click here</a></p>
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </div>
+</body>
+
+</html>

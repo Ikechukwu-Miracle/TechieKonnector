@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #EC8354;
+}
+
+@font-face {
+    font-family: "Montserrat-Alt1";
+    font-weight: 700;
+    font-style: normal;
+    src: url(/fonts/MontserratAlt1-Bold.woff);
+}
+
+h1 {
+    font-family: 'monospace', sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: xx-large;
+    color: #ffffff;
+    text-align: center;
+}
+
+.tech {
+    color: #EC8354
+}
+.konnect {
+    color: #4F46A1;
+}
+
+.container {
+    display: flex;
+    background-image: url(/images/roundtable.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    position: relative;
+}
+
+.welcome-message-box {
+    /* position: relative; */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical Centering */
+    z-index: 1;
+}
+
+.welcome-message {
+    width: 60%;
+    height: 65vh;
+    /* border: 1px solid gray; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.login {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical Centering */
+    z-index: 1;
+}
+
+.form-box {
+    width: 60%;
+    height: 65vh;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent white background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(5, 5, 5, 0.1); /* Soft shadow */
+    backdrop-filter: blur(10px); /* Blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    display: flex;
+    flex-direction: column;
+
+    
+}
+
+.logo {
+    background-image: url(/images/TECHIEKONNECTOR.png);
+    width: 300px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-self: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.login-message {
+    align-self: center;
+    margin-top: 15px;
+}
+
+input[type=email], input[type=password] {
+    border: none;
+    outline: none;
+    width: 80%;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-bottom: 2px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    background-color: transparent;
+  }
+
+  input[type=email]::placeholder, input[type=password]::placeholder {
+    color: white;
+  }
+  input[type=checkbox] {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  /* input[type=text]:focus {
+    border: 3px solid #4F46A1;
+  } */
+  
+  /* label {
+    margin-left: 180px;
+    align-self: flex-start;
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  } */
+  
+  input[type=submit] {
+    font-family: 'Roboto', sans-serif;
+    width: 80%;
+    background-color: #EC8354;
+    color: white;
+    padding: 12px 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #4F46A1;
+    color: #ffffff;
+
+  }
+
+  .remember-check {
+    display: inline-block;
+    /* width: 20px; */
+    height: 20px;
+    cursor: pointer;
+    align-self: flex-start;
+    vertical-align: middle;
+  }
+
+  .check-container {
+    display: inline-block;
+    align-self: flex-start;
+    margin-left: 35px;
+    margin-top: 10px;
+  }
+
+
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .welcome-message-box{
+        display: none;
+      }
+      
+    .welcome-message {
+        display: none;
+      }
+      
+      h1 {
+        display: none;
+      }
+      
+      .container {
+        background-image: url(/images/roundtable.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        object-fit: cover;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center; /* Horizontal centering */
+        align-items: center; /* Vertical Centering */
+        flex-direction: column;
+      }
+      
+      .login {
+        width: 80%;
+        height: 50vh;
+        /* display: flex;
+        justify-content: center; /* Horizontal centering */
+        /*align-items: center; /* Vertical Centering */
+        z-index: 1;
+      }
+  
+      .form-box {
+        width: 100%;
+        height: 50vh;
+        background-color: rgba(255, 255, 255, 0.2); /* Transparent white background */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 8px 16px rgba(5, 5, 5, 0.1); /* Soft shadow */
+        backdrop-filter: blur(10px); /* Blur effect */
+        -webkit-backdrop-filter: blur(10px); /* For Safari */
+        display: flex;
+        flex-direction: column;
+      }
+}
