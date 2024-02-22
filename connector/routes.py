@@ -1,3 +1,4 @@
+"""Defines the routes for our web application"""
 import os
 import secrets
 from PIL import Image
@@ -11,6 +12,7 @@ from flask_login import login_user, current_user, logout_user, login_required
 @app.route("/")
 @app.route("/home")
 def home():
+    """Renders the home page"""
     page = request.args.get('page', 1, type=int)
     posts = Post.query.order_by(Post.date_posted.desc()).paginate(page=page, per_page=5)
     return render_template('home.html', posts=posts)
@@ -18,11 +20,13 @@ def home():
 
 @app.route("/about")
 def about():
+    """Renders the about page"""
     return render_template('about.html', title='About')
 
 
 @app.route("/register", methods=['GET', 'POST'])
 def register():
+    """Renders the page for registration"""
     if current_user.is_authenticated:
         return redirect(url_for('home'))
     form = RegistrationForm()
